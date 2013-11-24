@@ -8,4 +8,9 @@ require_relative 'server/server'
 
 $server = Server.new
 
-binding.pry
+puts "Type 'quit' to exit. Server is now running on port 4000."
+
+while gets.chomp != 'quit'
+end
+
+puts 'Goodbye!'

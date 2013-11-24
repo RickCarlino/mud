@@ -23,8 +23,6 @@ class AbstractController
     command = command.split(' ')
     head    = command.shift
     tail    = command
-    puts head.inspect
-    puts tail.inspect
     interpret_command head.to_s.downcase, tail
   end
 
@@ -35,8 +33,18 @@ class AbstractController
       # from anywhere in the Mud.
       self.send(head, *tail)
     else
-      send_text "Command not found: #{head}"
+
+      send_text funny_responses.sample
     end
+  end
+
+  def funny_responses
+    [
+      'Huh?',
+      "What's that you say?",
+      'come again?',
+      "Sorry, I don't know that command."
+    ]
   end
 
   def allowed_methods

@@ -3,7 +3,7 @@ class Server
 
   attr_accessor :connections, :tcp_socket
 
-  def initialize(ip = "0.0.0.0", port = 23)
+  def initialize(ip = "0.0.0.0", port = 4000)
     @tcp_socket = TCPServer.new ip , port
 
     @connections = []

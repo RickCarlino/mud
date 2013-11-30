@@ -45,7 +45,11 @@ class AbstractController
   end
 
   def allowed_methods
-    []
+    ['quit']
+  end
+
+  def quit
+    session.connection.close
   end
 
 end

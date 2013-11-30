@@ -10,7 +10,7 @@ class Server
     @tcp_socket = TCPServer.new @ip , @port
     @connections = []
 
-    Thread.new do
+    @connection_acceptor = Thread.new do
       while connection = @tcp_socket.accept
         @connections << Session.new(connection)
       end

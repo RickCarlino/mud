@@ -12,5 +12,6 @@ Installation
 ---
 
  - `bundle install`
- - `ruby lib/mud`
- - `telnet localhost 4000`
+ - type `./mud` at the command line (type `chmod +x mud` if you get a weird error.)
+ - `telnet localhost 4000` in a different terminal session.
+ - profit

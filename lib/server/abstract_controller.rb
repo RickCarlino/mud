@@ -27,13 +27,10 @@ class AbstractController
   end
 
   def interpret_command(head, tail)
-    # Ruby continues to amaze me.
     if allowed_methods.include? head
-      # TODO: Implement a second if condition- allow the user to type a quit command
-      # from anywhere in the Mud.
+      # TODO:allow the user to type a quit command from anywhere in the Mud.
       self.send(head, *tail)
     else
-
       send_text funny_responses.sample
     end
   end

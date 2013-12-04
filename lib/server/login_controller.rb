@@ -8,6 +8,8 @@ class LoginController < AbstractController
     super + ['login']
   end
 
+  # The user authentication action. First command argument is the username.
+  # Second command argument is the password. All other arguments are ignored
   def login(*args)
     send_text "You entered #{args[0]} and #{args[1]}"
     send_text 'This is just a stub at this point, though'

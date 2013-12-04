@@ -5,7 +5,7 @@ describe LoginController do
   before(:each) do
     @server     = Server.new
     @player     = TCPSocket.new 'localhost', @server.port
-    sleep 0.01 # TODO: Fix the race condition here. ^
+    sleep 0.5 # TODO: Fix the race condition here. ^
     @controller = @server.connections.first.controller
   end
 

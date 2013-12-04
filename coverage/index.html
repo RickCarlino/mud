@@ -5,7 +5,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.7.1/application.js' type='text/javascript'></script>    
     <link href='./assets/0.7.1/application.css' media='screen, projection, print' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" type="image/png" href="./assets/0.7.1/favicon_yellow.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/0.7.1/favicon_red.png" />
     <link rel="icon" type="image/png" href="./assets/0.7.1/favicon.png" />
   </head>
   
@@ -14,14 +14,14 @@
       <img src="./assets/0.7.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2013-11-30T20:30:16-07:00">2013-11-30T20:30:16-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2013-12-03T18:59:35-07:00">2013-12-03T18:59:35-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">81.82%</span></span>
+    (<span class="covered_percent"><span class="red">79.01%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
@@ -32,9 +32,9 @@
   <a name="AllFiles"></a>
   <div>
     <b>6</b> files in total.
-    <b>77</b> relevant lines. 
-    <span class="green"><b>63</b> lines covered</span> and
-    <span class="red"><b>14</b> lines missed </span>
+    <b>81</b> relevant lines. 
+    <span class="green"><b>64</b> lines covered</span> and
+    <span class="red"><b>17</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -62,18 +62,18 @@
       
       <tr>
         <td class="strong"><a href="#5e2317c3e2d429dad03b2f99e775d741e4a57e3a" class="src_link" title="lib/server/abstract_controller.rb">lib/server/abstract_controller.rb</a></td>
-        <td class="red strong">60.0 %</td>
-        <td>55</td>
-        <td>25</td>
-        <td>15</td>
-        <td>10</td>
+        <td class="red strong">55.17 %</td>
+        <td>102</td>
+        <td>29</td>
+        <td>16</td>
+        <td>13</td>
         <td>0.7</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#88350a68737fe4fd3577a58ec628e525e302343a" class="src_link" title="lib/server/login_controller.rb">lib/server/login_controller.rb</a></td>
         <td class="red strong">66.67 %</td>
-        <td>19</td>
+        <td>21</td>
         <td>9</td>
         <td>6</td>
         <td>3</td>
@@ -189,11 +189,11 @@
         <div class="source_table" id="5e2317c3e2d429dad03b2f99e775d741e4a57e3a">
   <div class="header">
     <h3>lib/server/abstract_controller.rb</h3>
-    <h4><span class="red">60.0 %</span> covered</h4>
+    <h4><span class="red">55.17 %</span> covered</h4>
     <div>
-      <b>25</b> relevant lines. 
-      <span class="green"><b>15</b> lines covered</span> and
-      <span class="red"><b>10</b> lines missed.</span>
+      <b>29</b> relevant lines. 
+      <span class="green"><b>16</b> lines covered</span> and
+      <span class="red"><b>13</b> lines missed.</span>
     </div>
   </div>
   
@@ -230,88 +230,88 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="6">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="6">
           
-          <code class="ruby">  def initialize(session)</code>
+          
+          <code class="ruby">  # Instantiates a new controller instance. It is highly recomended that derived</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="7">
-          <span class="hits">2</span>
+        <li class="never" data-hits="" data-linenumber="7">
           
-          <code class="ruby">    @session = session</code>
+          
+          <code class="ruby">  # controller classes use the +super+ keyword for future versions.</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="8">
-          <span class="hits">2</span>
+        <li class="never" data-hits="" data-linenumber="8">
           
-          <code class="ruby">    on_create</code>
+          
+          <code class="ruby">  #</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">  # * +session+ - (Session) The connection session that the controller will</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # communicate with.</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="11">
           <span class="hits">1</span>
           
-          <code class="ruby">  def on_create</code>
+          <code class="ruby">  def initialize(session)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="covered" data-hits="2" data-linenumber="12">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    @session = session</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="13">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    on_create</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby">    nil</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="13">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="14">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def get_text(command)</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="15">
-          
-          
-          <code class="ruby">    parse_command command</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="17">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # User definable callback called after instantiation. Return values are</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="18">
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby">  # silenced to nil when called by the controller&#39;s constructor.</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
           <span class="hits">1</span>
           
-          <code class="ruby">  def send_text(command)</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="19">
-          <span class="hits">2</span>
-          
-          <code class="ruby">    @session.connection.puts(command)</code>
+          <code class="ruby">  def on_create</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="20">
@@ -326,205 +326,487 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="22">
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby">  # Parses any string sent from user to the server via TCP Socket within the</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby">  # format of &#39;COMMAND_NAME ARG1 ARG2 ARG3......&#39;. Only executes the command if</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">  # the action name is found within the whitelist generated by the</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby">  # allowed_methods() Array.</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="26">
           <span class="hits">1</span>
           
-          <code class="ruby">  def parse_command(command)</code>
+          <code class="ruby">  def get_text(command)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="23">
+        <li class="missed" data-hits="0" data-linenumber="27">
           
           
-          <code class="ruby">    command = command.split(&#39; &#39;)</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="24">
-          
-          
-          <code class="ruby">    head    = command.shift</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="25">
-          
-          
-          <code class="ruby">    tail    = command</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="26">
-          
-          
-          <code class="ruby">    interpret_command head.to_s.downcase, tail</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="27">
-          
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    parse_command command</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="28">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="29">
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby">  # Sends a string to remote client over the TCP socket connection.</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="31">
           <span class="hits">1</span>
           
-          <code class="ruby">  def interpret_command(head, tail)</code>
+          <code class="ruby">  def send_text(command)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="30">
+        <li class="covered" data-hits="2" data-linenumber="32">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">    if allowed_methods.include? head</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="31">
-          
-          
-          <code class="ruby">      # TODO:allow the user to type a quit command from anywhere in the Mud.</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="32">
-          
-          
-          <code class="ruby">      self.send(head, *tail)</code>
+          <code class="ruby">    @session.connection.puts(command)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="33">
           
           
-          <code class="ruby">    else</code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="34">
+        <li class="never" data-hits="" data-linenumber="34">
           
           
-          <code class="ruby">      send_text funny_responses.sample</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="35">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">  # Parses arbitrary user input string into a format usable by the interpreter.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="36">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">  # Dynamicly returns the result of the method that was intended to be called.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="37">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # Typically not used directly.</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="38">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="38">
           
-          <code class="ruby">  def funny_responses</code>
+          
+          <code class="ruby">  #</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="39">
           
           
-          <code class="ruby">    [</code>
+          <code class="ruby">  # * +command+ - (String) A string of space seperated commands and arguments</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="40">
+        <li class="never" data-hits="" data-linenumber="40">
           
           
-          <code class="ruby">      &#39;Huh?&#39;,</code>
+          <code class="ruby">  #</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="41">
           
           
-          <code class="ruby">      &quot;What&#39;s that you say?&quot;,</code>
+          <code class="ruby">  #    parse_command(&#39;login user_x password123&#39;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="42">
           
           
-          <code class="ruby">      &#39;come again?&#39;,</code>
+          <code class="ruby">  #    # =&gt; True</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="43">
+        <li class="covered" data-hits="1" data-linenumber="43">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      &quot;Sorry, I don&#39;t know that command.&quot;</code>
+          <code class="ruby">  def parse_command(command)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="44">
+        <li class="missed" data-hits="0" data-linenumber="44">
           
           
-          <code class="ruby">    ]</code>
+          <code class="ruby">    command = command.split(&#39; &#39;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="45">
+        <li class="missed" data-hits="0" data-linenumber="45">
+          
+          
+          <code class="ruby">    head    = command.shift</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="46">
+          
+          
+          <code class="ruby">    tail    = command</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="47">
+          
+          
+          <code class="ruby">    interpret_command head.to_s.downcase, tail</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="48">
           
           
           <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="46">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="47">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def allowed_methods</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="48">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    [&#39;quit&#39;]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="49">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="50">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # Interprets a controller command (first argument) along with its argument</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="51">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="51">
           
-          <code class="ruby">  def quit</code>
+          
+          <code class="ruby">  # list as a string seperated by spaces. Returns the return value of the target</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="52">
+        <li class="never" data-hits="" data-linenumber="52">
           
           
-          <code class="ruby">    session.connection.close</code>
+          <code class="ruby">  # method.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="53">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">  #</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="54">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # * +head+ - (String) The command to execute. Will only execute the command if</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="55">
+          
+          
+          <code class="ruby">  # it within the &#39;allowed_methods&#39; dynamic array.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="56">
+          
+          
+          <code class="ruby">  # * +tail+ - (String) A string of space seperated arguments that are passed to</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="57">
+          
+          
+          <code class="ruby">  # the method being called.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="58">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="59">
+          
+          
+          <code class="ruby">  #    interpret_command(&#39;add&#39;, &#39;1 2 3 4&#39;) # Assumes the current controller has</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="60">
+          
+          
+          <code class="ruby">  #                                        # an add() method defined and within</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="61">
+          
+          
+          <code class="ruby">  #    # =&gt; 10                             # the allowed_methods Array.</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="62">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def interpret_command(head, tail)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="63">
+          
+          
+          <code class="ruby">    if allowed_methods.include? head</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="64">
+          
+          
+          <code class="ruby">      begin</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="65">
+          
+          
+          <code class="ruby">        self.send(head, *tail)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="66">
+          
+          
+          <code class="ruby">      rescue</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="67">
+          
+          
+          <code class="ruby">        send_text &#39;You just broke something. Please tell the admins about this.&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="68">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="69">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="70">
+          
+          
+          <code class="ruby">      send_error</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="71">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="72">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="73">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="74">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def send_error</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="75">
+          
+          
+          <code class="ruby">    send_text funny_responses.sample</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="76">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="77">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="78">
+          
+          
+          <code class="ruby">  # Private parameterless method used for generating quirky messages when the</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="79">
+          
+          
+          <code class="ruby">  # user attempts to use a non-existant / forbidden controller action. Returns</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="80">
+          
+          
+          <code class="ruby">  # String.</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="81">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def funny_responses</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="82">
+          
+          
+          <code class="ruby">    [</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="83">
+          
+          
+          <code class="ruby">      &#39;Huh?&#39;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="84">
+          
+          
+          <code class="ruby">      &quot;What&#39;s that you say?&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="85">
+          
+          
+          <code class="ruby">      &#39;come again?&#39;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="86">
+          
+          
+          <code class="ruby">      &quot;Sorry, I don&#39;t know that command.&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="87">
+          
+          
+          <code class="ruby">    ]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="88">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="89">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="90">
+          
+          
+          <code class="ruby">  # Dynamically generated list of user accesible controller methods. By default</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="91">
+          
+          
+          <code class="ruby">  # (and when used in conjugation with +super+ in derived classes), will return</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="92">
+          
+          
+          <code class="ruby">  # [&#39;quit&#39;] as its only accessible method. Returns Array of Strings.</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="93">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def allowed_methods</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="94">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    [&#39;quit&#39;]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="95">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="96">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="97">
+          
+          
+          <code class="ruby">  # Void paramaterless controller action that closes TCP socket to client.</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="98">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def quit(*args)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="99">
+          
+          
+          <code class="ruby">    session.connection.close</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="100">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="101">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="102">
           
           
           <code class="ruby">end</code>
@@ -608,46 +890,46 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">  # The user authentication action. First command argument is the username.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby">  # Second command argument is the password. All other arguments are ignored</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
           <code class="ruby">  def login(*args)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="12">
+        <li class="missed" data-hits="0" data-linenumber="14">
           
           
           <code class="ruby">    send_text &quot;You entered #{args[0]} and #{args[1]}&quot;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="13">
+        <li class="missed" data-hits="0" data-linenumber="15">
           
           
           <code class="ruby">    send_text &#39;This is just a stub at this point, though&#39;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="14">
+        <li class="missed" data-hits="0" data-linenumber="16">
           
           
           <code class="ruby">    send_text &#39;You have seen just about everything. I suggest typing &quot;quit&quot;&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="16">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
         <li class="never" data-hits="" data-linenumber="17">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="18">
@@ -657,6 +939,18 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
           
           
           <code class="ruby">end</code>

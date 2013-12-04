@@ -15,3 +15,7 @@ Installation
  - type `./mud` at the command line (type `chmod +x mud` if you get a weird error.)
  - `telnet localhost 4000` in a different terminal session.
  - profit
+
+ Warning
+ ===
+ **passwords are not hashed**. This is just a 'fun' project. Don't run it in production / publicly.

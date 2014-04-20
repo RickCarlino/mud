@@ -1,0 +1,11 @@
+coverage/**
+log/*
+doc/**/*
+doc/*
+tmp/**/*
+.DS_Store
+.project
+.loadpath
+.bundle/*
+*.swp
+.idea/*

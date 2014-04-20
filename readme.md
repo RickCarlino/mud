@@ -7,15 +7,16 @@ It's got:
  - Sockets
  - Threads
  - ?????
+ - 0 external runtime dependencies (pure Ruby, yo.)
 
 Installation
 ---
 
  - `bundle install`
- - type `./mud` at the command line (type `chmod +x mud` if you get a weird error.)
- - `telnet localhost 4000` in a different terminal session.
- - profit
+ - Run `ruby mud`
+ - type `telnet localhost 4000` in a different terminal session.
 
- Warning
- ===
- **passwords are not hashed**. This is just a 'fun' project. Don't run it in production / publicly.
+Word of Caution
+---
+
+**Telnet is insecure by default**. All network traffic to the game is sent in the clear. Furthermore, no password hashing mechanism exists in the codebase. Don't use real passwords when running this codebase.

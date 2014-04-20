@@ -1,9 +1,6 @@
 require 'rspec'
 require 'simplecov'
+require 'pry'
 SimpleCov.start
 
-require_relative '../lib/loader'
-
-# RSpec.configure do |config|
-#   # some (optional) configs here
-# end
+require 'mud'

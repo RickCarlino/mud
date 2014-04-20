@@ -1,7 +1,5 @@
-require_relative 'loader'
+require 'socket'
+require 'mud_server'
+require 'abstract_controller'
+require 'session'
 
-$server = Server.new
-puts "press enter to exit. Server is now running on port 4000."
-
-gets.chomp
-puts 'Goodbye!'

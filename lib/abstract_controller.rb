@@ -1,5 +1,5 @@
 #All controllers should inherit from here
-class AbstractController
+class MudServer::AbstractController
 
   attr_accessor :session
 
@@ -25,6 +25,10 @@ class AbstractController
   # allowed_methods() Array.
   def get_text(command)
     parse_command command
+  end
+
+  def gets
+    @session.connection.gets
   end
 
   # Sends a string to remote client over the TCP socket connection.
@@ -61,14 +65,12 @@ class AbstractController
   #    # => 10                             # the allowed_methods Array.
   def interpret_command(head, tail)
     if allowed_methods.include? head
-      begin
-        self.send(head, *tail)
-      rescue
-        send_text 'You just broke something. Please tell the admins about this.'
-      end
+      self.send(head, *tail)
     else
       send_error
     end
+  rescue
+      send_text 'You just broke something. Please tell the admins about this.'
   end
 
   def send_error

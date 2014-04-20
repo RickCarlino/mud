@@ -1,4 +1,6 @@
 coverage/**
+coverage/*
+coverage/
 log/*
 doc/**/*
 doc/*

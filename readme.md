@@ -1,6 +1,6 @@
 # Ruby Mud
 
-@M3talsmith made mention that he liked MUDs. Here's a mud I made. It's been recently cleaned up for use by others.
+A microframework for building Telnet-based text adventure games using Ruby. Started as a curiosity, now it's an actual ruby gem.
 
 It's got:
 
@@ -13,9 +13,9 @@ It's got:
 
  - `gem install ruby-mud`
  - `require 'ruby_mud'`
+ - Follow the tutorial.
 
-
-# Word of Caution
+# A Word of Caution Before Starting...
 
 **Telnet is insecure by default**. All network traffic to the game is sent in the clear. Advise users against using real passwords when running this codebase. This ain't SSH!
 
@@ -28,7 +28,6 @@ require 'ruby_mud'
 # main game, map screen, etc.. By default, the server will start new connections
 # in MudServer::DefaultController.
 class MudServer::DefaultController
-
   # on_start will always be called when the user enters a controller.
   # You don't need to use it, but it's there.
   def on_start
@@ -39,14 +38,12 @@ class MudServer::DefaultController
     send_text "SECRET: Go somewhere super secret."
     send_text "QUIT  : Disconnect from the server."
   end
-
   # For security, you must explicitly whitelist any commands that you want to
   # give players access to. Otherwise they will not be accessible by users.
   def allowed_methods
     super + ['time', 'secret', 'say'] # Quit is available by default via `super`
                                       # No need to implement it yourself.
   end
-
   # User input after a command is provided via `params`.
   def say
    send_text "You just said: #{params}"
@@ -55,12 +52,10 @@ class MudServer::DefaultController
   def time
     send_text "The time is now #{Time.now}"
   end
-
   #Transfer people to a different menu / area using `transfer_to`
   def secret
     transfer_to PokerRoom # Define the PokerRoom as a controller.
   end
-
 end
 
 # An example of another controller / sub-game / menu.

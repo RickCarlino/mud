@@ -1,7 +1,8 @@
 #The server class creates a single instance of a mud server.
 class MudServer
 
-  attr_accessor :connection_pool, :tcp_socket, :connection_acceptor, :port, :ip, :environment
+  attr_accessor :connection_pool, :tcp_socket,
+                :connection_acceptor, :port, :ip, :environment
 
   def initialize(ip = "0.0.0.0", port = 4000, environment = 'development')
     bootstrap_settings(ip, port, environment)
@@ -11,7 +12,8 @@ class MudServer
     @port            = port
     @ip              = ip
     @environment     = environment
-    @connection_pool = [] # This is where we keep reference to all game connections
+    @connection_pool = [] # This is where we keep reference to all game
+                          # connections
   end
 
   def start

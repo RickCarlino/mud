@@ -15,10 +15,10 @@ class MudServer
   end
 
   def start
-    @tcp_socket          = TCPServer.new @ip , @port
+    @tcp_socket = TCPServer.new @ip , @port
     @connection_acceptor = Thread.new do
       while connection = @tcp_socket.accept
-        @connections << MudServer::Session.new(connection)
+        @connection_pool << MudServer::Session.new(connection)
       end
     end
     return true

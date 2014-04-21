@@ -1,5 +1,5 @@
 require 'spec_helper'
-
+require 'socket'
 describe MudServer do
 
   let(:server){ MudServer.new }
@@ -20,6 +20,18 @@ describe MudServer do
       expect(mud.start).to be_true
       expect(mud.tcp_socket).to be_kind_of(TCPServer)
       expect(mud.stop).to be_true # Prevents reference leaks.
+    end
+
+    it 'accepts incoming connections' do
+      mud = server
+      server.start
+      socket = TCPSocket.new server.ip, server.port
+      message = socket.gets.chomp
+      socket.puts 'quit'
+      socket.close
+      server.stop
+
+      expect(message).to eq('It works! Type `quit` to end')
     end
   end
 

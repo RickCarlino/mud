@@ -3,4 +3,4 @@ require 'simplecov'
 require 'pry'
 SimpleCov.start
 
-require 'mud'
+require 'ruby_mud'

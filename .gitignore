@@ -10,3 +10,4 @@ tmp/**/*
 .bundle/*
 *.swp
 .idea/*
+notes.rb

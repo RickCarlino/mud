@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.license     = 'MIT'
   s.email       = 'please-use-github@rickcarlino.com'
   s.homepage    = 'https://github.com/rickcarlino/mud'
-  s.files       = ['lib/mud.rb']
+  s.files       = ['lib/ruby_mud.rb']
 
   # s.add_runtime_dependency 'dont_have_any'
 

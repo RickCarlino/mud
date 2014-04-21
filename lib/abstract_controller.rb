@@ -1,7 +1,7 @@
 #All controllers should inherit from here
 class MudServer::AbstractController
 
-  attr_accessor :session
+  attr_accessor :session, :params
 
   # Instantiates a new controller instance. It is highly recomended that derived
   # controller classes use the +super+ keyword for future versions.
@@ -10,13 +10,22 @@ class MudServer::AbstractController
   # communicate with.
   def initialize(session)
     @session = session
-    on_create
-    nil
+    on_start
+    true
   end
 
-  # User definable callback called after instantiation. Return values are
-  # silenced to nil when called by the controller's constructor.
-  def on_create
+  # User definable callback called after instantiation.
+  def on_start
+  end
+
+  # Sends a string to remote client over the TCP socket connection.
+  def send_text(command)
+    @session.connection.puts(command)
+  end
+
+  # Void paramaterless controller action that closes TCP socket to client.
+  def quit
+    session.connection.close
   end
 
   # Parses any string sent from user to the server via TCP Socket within the
@@ -27,14 +36,6 @@ class MudServer::AbstractController
     parse_command command
   end
 
-  def gets
-    @session.connection.gets
-  end
-
-  # Sends a string to remote client over the TCP socket connection.
-  def send_text(command)
-    @session.connection.puts(command)
-  end
 
   # Parses arbitrary user input string into a format usable by the interpreter.
   # Dynamicly returns the result of the method that was intended to be called.
@@ -47,8 +48,8 @@ class MudServer::AbstractController
   def parse_command(command)
     command = command.split(' ')
     head    = command.shift
-    tail    = command
-    interpret_command head.to_s.downcase, tail
+    @params = command.join(' ')
+    interpret_command head.to_s.downcase
   end
 
   # Interprets a controller command (first argument) along with its argument
@@ -63,14 +64,15 @@ class MudServer::AbstractController
   #    interpret_command('add', '1 2 3 4') # Assumes the current controller has
   #                                        # an add() method defined and within
   #    # => 10                             # the allowed_methods Array.
-  def interpret_command(head, tail)
+  def interpret_command(head)
     if allowed_methods.include? head
-      self.send(head, *tail)
+      self.send(head)
     else
       send_error
     end
-  rescue
+  rescue => error
       send_text 'You just broke something. Please tell the admins about this.'
+      send_text error.message
   end
 
   def send_error
@@ -96,9 +98,8 @@ class MudServer::AbstractController
     ['quit']
   end
 
-  # Void paramaterless controller action that closes TCP socket to client.
-  def quit(*args)
-    session.connection.close
+  def transfer_to(controller_name)
+    @session.controller = controller_name.new(@session)
   end
 
 end

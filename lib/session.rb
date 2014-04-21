@@ -2,9 +2,9 @@ class MudServer::Session
 
   attr_accessor :connection, :ip_addr, :input_thread, :controller
 
-  def initialize(connection, controller, wait = false)
+  def initialize(connection, controller = MudServer::DefaultController)
     bootstrap_settings(connection, controller)
-    start unless wait
+    start
   end
 
   def bootstrap_settings(connection, controller)
